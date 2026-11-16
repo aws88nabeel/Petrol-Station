@@ -1,0 +1,24 @@
+# MariaDB for local integration testing of the MySQL adapter.
+# Not required for sqlite development; used by `npm run test:mysql`.
+#
+#   docker compose up -d
+#   DB_TYPE=mysql DB_HOST=127.0.0.1 DB_PORT=3306 \
+#   DB_USER=erp DB_PASSWORD=erp123 DB_NAME=erp \
+#   MYSQL_TEST=1 npm run test:mysql
+services:
+  mariadb:
+    image: mariadb:11
+    container_name: erp-mariadb
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: erp
+      MARIADB_USER: erp
+      MARIADB_PASSWORD: erp123
+    ports:
+      - "3306:3306"
+    volumes:
+      - erp-mariadb-data:/var/lib/mysql
+
+volumes:
+  erp-mariadb-data:

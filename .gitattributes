@@ -1,0 +1,16 @@
+# Normalize text files to LF in the repository for consistent diffs.
+* text=auto eol=lf
+
+# Windows launchers keep CRLF so double-click still works everywhere.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary

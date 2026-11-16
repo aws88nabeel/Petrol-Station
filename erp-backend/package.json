@@ -1,0 +1,26 @@
+{
+  "name": "erp-backend",
+  "version": "1.0.0",
+  "description": "Simplified ERP for sales/profit governance (petrol station)",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "dev": "node src/server.js",
+    "start": "node src/server.js",
+    "build": "node scripts/build-frontend.mjs",
+    "test": "node --test src/profit.test.js",
+    "test:mysql": "node --test src/mysql.integration.test.js",
+    "dump": "node scripts/dump-sqlite.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.24.4",
+    "pdfkit": "^0.20.2"
+  }
+}

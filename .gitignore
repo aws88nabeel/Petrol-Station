@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+build/
+out/
+erp-backend/public/
+erp-frontend/dist/
+
+# Local data / databases / runtime files
+erp-backend/data/
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Environment & secrets (keep examples)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+server.out.log
+server.err.log
+erp-frontend/vite.out.log
+
+# Archives / local bundles
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Test / coverage / caches
+coverage/
+.nyc_output/
+*.tsbuildinfo
+.eslintcache
+.vite/
+.cache/
+.parcel-cache/
+
+# Editors / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
